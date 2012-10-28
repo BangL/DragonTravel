@@ -73,7 +73,7 @@
 		</repository>
 		<repository>
 			<id>bukkit-repo</id>
-			<url>http://repo.bukkit.org/content/repositories/snapshots/org/bukkit/craftbukkit/1.4.2-R0.1-SNAPSHOT/</url>
+			<url>http://repo.bukkit.org/content/groups/public</url>
 		</repository>
 		<repository>
 			<id>com.sk89q</id>
