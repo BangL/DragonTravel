@@ -183,7 +183,7 @@ public class XemDragon extends EntityEnderDragon {
 	}
 
 	@Override
-	public void d() {
+	public void c() {
 
 		// Travel
 		if (isTravel) {

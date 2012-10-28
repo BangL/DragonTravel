@@ -82,7 +82,7 @@
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>craftbukkit</artifactId>
-			<version>1.3.1-R2.0</version>
+			<version>1.4.2-R0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sk89q</groupId>
@@ -100,14 +100,9 @@
 			<version>5.6-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>org.bukkit</groupId>
-			<artifactId>craftbukkit</artifactId>
-			<version>1.3.1-R2.0</version>
-		</dependency>
-		<dependency>
 			<groupId>net.milkbowl</groupId>
 			<artifactId>vault</artifactId>
-			<version>1.2.18-SNAPSHOT</version>
+			<version>1.2.19-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
