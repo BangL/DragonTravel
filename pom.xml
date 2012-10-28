@@ -75,6 +75,10 @@
 			<id>com.sk89q</id>
 			<url>http://maven.sk89q.com</url>
 		</repository>
+		<repository>
+			<id>bukkit-repo</id>
+			<url>http://repo.bukkit.org</url>
+		</repository>
 	</repositories>
 
 	<!-- Dependencies -->
