@@ -8,7 +8,7 @@
 
 Developer: XemsDoom<br>
 Documenter, Wiki: Phiwa<br>
-Version: 1.6<br>
+Version: 1.7<br>
 Website: http://xemsdoom.com<br>
 Twitter: @XemsDoom
 <hr/>
