@@ -67,6 +67,12 @@ public class Travels {
 		notchWorld.addEntity(XemDragon);
 		LivingEntity dragon = (LivingEntity) XemDragon.getBukkitEntity();
 
+                // Stop checking for fly hack on this player if AntiCheat enabled
+		if (DragonTravelMain.anticheat
+				&& !net.h31ix.anticheat.api.AnticheatAPI.isExempt(player, net.h31ix.anticheat.manage.CheckType.FLY)) {
+			net.h31ix.anticheat.api.AnticheatAPI.exemptPlayer(player, net.h31ix.anticheat.manage.CheckType.FLY);
+		}
+
 		// Set the player as passenger to the XemDragon
 		dragon.setPassenger(player);
 
@@ -125,6 +131,12 @@ public class Travels {
 		clone.setY(clone.getY() + 2);
 		player.teleport(clone);
 
+                // Continue checking for fly hack on this player if AntiCheat enabled
+		if (DragonTravelMain.anticheat
+				&& net.h31ix.anticheat.api.AnticheatAPI.isExempt(player, net.h31ix.anticheat.manage.CheckType.FLY)) {
+			net.h31ix.anticheat.api.AnticheatAPI.unexemptPlayer(player, net.h31ix.anticheat.manage.CheckType.FLY);
+		}
+
 		player.sendMessage(MessagesLoader.replaceColors(DragonTravelMain.messages.getString("DismountSuccessful")));
 	}
 
@@ -144,24 +156,24 @@ public class Travels {
 		MusicHandler.stopEpicSound(player);
 		DragonTravelMain.TravelInformation.remove(player);
 
-        // Teleport player to safe location
-        Location clone = player.getLocation().clone();
-        int offset = 1;
+                // Teleport player to safe location
+                Location clone = player.getLocation().clone();
+                int offset = 1;
 
-        for (;;) {
+                for (;;) {
 
-            while (clone.getBlock().isEmpty() && clone.getY() != 0) {
-                clone.setY(clone.getY() - offset);
-            }
+                    while (clone.getBlock().isEmpty() && clone.getY() != 0) {
+                        clone.setY(clone.getY() - offset);
+                    }
 
-            if (clone.getY() != 0)
-                break;
+                    if (clone.getY() != 0)
+                        break;
 
-            clone.setY(256);
-        }
+                    clone.setY(256);
+                }
 
-        clone.setY(clone.getY() + 2);
-        player.teleport(clone);
+                clone.setY(clone.getY() + 2);
+                player.teleport(clone);
 
 		clone.setY(clone.getY() + 2);
 		player.teleport(clone);
@@ -169,6 +181,12 @@ public class Travels {
 		// Remove dragon from world
 		entity.eject();
 		entity.remove();
+
+                // Continue checking for fly hack on this player if AntiCheat enabled
+		if (DragonTravelMain.anticheat
+				&& net.h31ix.anticheat.api.AnticheatAPI.isExempt(player, net.h31ix.anticheat.manage.CheckType.FLY)) {
+			net.h31ix.anticheat.api.AnticheatAPI.unexemptPlayer(player, net.h31ix.anticheat.manage.CheckType.FLY);
+		}
 	}
 
 	/**
@@ -192,6 +210,12 @@ public class Travels {
 			// Remove entity/dragon
 			entity.remove();
 			passed++;
+		}
+
+                // Continue checking for fly hack on this player if AntiCheat enabled
+		if (DragonTravelMain.anticheat
+				&& net.h31ix.anticheat.api.AnticheatAPI.isExempt(player, net.h31ix.anticheat.manage.CheckType.FLY)) {
+			net.h31ix.anticheat.api.AnticheatAPI.unexemptPlayer(player, net.h31ix.anticheat.manage.CheckType.FLY);
 		}
 
 		// Send "done"-message

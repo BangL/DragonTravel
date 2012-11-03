@@ -22,6 +22,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.getspout.spoutapi.sound.SoundManager;
 
+import com.xemsdoom.dt.anticheat.DragonTravelAntiCheat;
 import com.xemsdoom.dt.commands.Commands;
 import com.xemsdoom.dt.economy.EconomyHandler;
 import com.xemsdoom.dt.listeners.BlockListener;
@@ -90,6 +91,9 @@ public class DragonTravelMain extends JavaPlugin{
     public static boolean spout = false;
 
     public static boolean ignoreAntiMobspawnAreas = true;
+
+    // AntiCheat
+    public static boolean anticheat = false;
 
     // DT Dragon
     public static Double speed;
@@ -216,6 +220,11 @@ public class DragonTravelMain extends JavaPlugin{
             // Registring
             pm.registerEvents(inputListener, this);
             pm.registerEvents(buttonListener, this);
+        }
+
+        // AntiCheat
+        if(DragonTravelAntiCheat.getAntiCheat()){
+            System.out.println("[DragonTravel] AntiCheat support enabled");
         }
 
         // Economy
