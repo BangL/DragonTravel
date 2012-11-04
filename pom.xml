@@ -79,16 +79,18 @@
 			<id>com.sk89q</id>
 			<url>http://maven.sk89q.com</url>
 		</repository>
+		<repository>
+			<id>com.xemsdoom</id>
+			<url>http://repo.xemsdoom.com</url>
+		</repository>
 	</repositories>
 
 	<!-- Dependencies -->
 	<dependencies>
         <dependency>
-		<groupId>net.h31ix</groupId>
+			<groupId>net.h31ix</groupId>
 			<artifactId>AntiCheat</artifactId>
 			<version>1.4</version>
-			<scope>system</scope>
-			<systemPath>/var/lib/jenkins/.m2/repository/net/h31ix/AntiCheat.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
