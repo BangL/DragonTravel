@@ -16,6 +16,8 @@ import com.xemsdoom.dt.XemDragon;
 import com.xemsdoom.dt.commands.CommandHandlers;
 import com.xemsdoom.dt.economy.EconomyHandler;
 import com.xemsdoom.dt.spout.music.MusicHandler;
+import org.bukkit.entity.EntityType;
+import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 
 /**
  * Copyright (C) 2011-2012 Moser Luca/Philipp Wagner
@@ -64,7 +66,7 @@ public class Travels {
 		// Spawning XemDragon
 		net.minecraft.server.World notchWorld = ((CraftWorld) player.getWorld()).getHandle();
 		XemDragon XemDragon = new XemDragon(player.getLocation(), notchWorld);
-		notchWorld.addEntity(XemDragon);
+		notchWorld.addEntity(XemDragon, SpawnReason.CUSTOM);
 		LivingEntity dragon = (LivingEntity) XemDragon.getBukkitEntity();
 
                 // Stop checking for fly hack on this player if AntiCheat enabled
