@@ -1,7 +1,6 @@
-/com
-/target
-/.settings
+target/
+.settings
 .idea
-.casspath
 .project
 *.iml
+.classpath
