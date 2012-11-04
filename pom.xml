@@ -47,7 +47,7 @@
 				</excludes>
 			</resource>
 		</resources>
-		<defaultGoal>install</defaultGoal>
+		<defaultGoal>clean install</defaultGoal>
 		<!-- Plugins -->
 		<plugins>
 			<!-- Compiler plugin -->
@@ -87,6 +87,8 @@
 		<groupId>net.h31ix</groupId>
 			<artifactId>AntiCheat</artifactId>
 			<version>1.4</version>
+			<scope>system</scope>
+			<systemPath>/var/lib/jenkins/.m2/repository/net/h31ix/AntiCheat.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
