@@ -83,10 +83,9 @@
 
 	<!-- Dependencies -->
 	<dependencies>
-            <dependency>
+        <dependency>
 		<groupId>net.h31ix</groupId>
 			<artifactId>AntiCheat</artifactId>
-			<version>1.4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
