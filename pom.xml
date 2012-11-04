@@ -47,7 +47,7 @@
 				</excludes>
 			</resource>
 		</resources>
-		<defaultGoal>clean install</defaultGoal>
+		<defaultGoal>install</defaultGoal>
 		<!-- Plugins -->
 		<plugins>
 			<!-- Compiler plugin -->
@@ -86,6 +86,7 @@
         <dependency>
 		<groupId>net.h31ix</groupId>
 			<artifactId>AntiCheat</artifactId>
+			<version>1.4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
