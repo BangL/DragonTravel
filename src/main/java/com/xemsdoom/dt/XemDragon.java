@@ -1,7 +1,7 @@
 package com.xemsdoom.dt;
 
-import net.minecraft.server.v1_4_5.EntityEnderDragon;
-import net.minecraft.server.v1_4_5.World;
+import net.minecraft.server.v1_4_R1.EntityEnderDragon;
+import net.minecraft.server.v1_4_R1.World;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
@@ -182,21 +182,6 @@ public class XemDragon extends EntityEnderDragon {
 		ZTick = Math.abs(distanceZ) / tick;
 	}
 
-	@Override
-	public void c() {
-
-		// Travel
-		if (isTravel) {
-			travel();
-			return;
-		}
-
-		// Flight
-		if (isFlight) {
-			flight();
-		}
-	}
-
 	/**
 	 * Flight with waypoints
 	 */
@@ -322,7 +307,23 @@ public class XemDragon extends EntityEnderDragon {
 		setPosition(myX, myY, myZ);
 	}
 
-	public double x_() {
+	@Override
+	public void c() {
+
+		// Travel
+		if (isTravel) {
+			travel();
+			return;
+		}
+
+		// Flight
+		if (isFlight) {
+			flight();
+		}
+	}
+
+	@Override
+	public double X() {
 		return 3;
 	}
 }
