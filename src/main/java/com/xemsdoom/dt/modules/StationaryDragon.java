@@ -2,8 +2,8 @@ package com.xemsdoom.dt.modules;
 
 import com.xemsdoom.dt.DragonTravelMain;
 import com.xemsdoom.dt.XemDragon;
-import net.minecraft.server.v1_4_R1.World;
-import org.bukkit.craftbukkit.v1_4_R1.CraftWorld;
+import net.minecraft.server.v1_5_R1.World;
+import org.bukkit.craftbukkit.v1_5_R1.CraftWorld;
 import org.bukkit.entity.Player;
 
 /**
